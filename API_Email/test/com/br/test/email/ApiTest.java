@@ -7,15 +7,21 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.br.email.api.Api;
+import com.google.gson.Gson;
+
+import br.com.api.email.bean.Dados;
+import br.com.api.email.bean.Email;
 
 public class ApiTest {
 
 	private Api api;
 	private Properties prop;
+	private Email email;
 	
 	
 	public ApiTest() {
-		this.api = new Api();
+		api = new Api();
+		email = new Email();
 	}
 	
 	@Before
@@ -34,13 +40,29 @@ public class ApiTest {
 		Assert.assertEquals(true, api.sessaoDeEmail(prop) != null);
 	}
 	
+	@Before
 	@Test
 	public void deveraMontarUmEmail(){
-		Assert.assertEquals(true, api.montarEmail("") != null);
+		Dados dados = new Dados();
+		Gson gson = new Gson();
+		
+		dados.setMatricula("1234");
+		dados.setNome("Maria da Silva Sauro");
+		dados.setDataNascimento("01/01/0001");
+		dados.setDataParto("01/09/0001");
+		dados.setEndereco("Floresta dos Dinossauros rua 3 casa 0");
+		dados.setTelefone("(99)0000-0001");
+		dados.setQuantidadeFrascosCheio(0);
+		dados.setQuantidadeFrascosVazio(10);
+		
+		String json = gson.toJson(dados);
+		
+		this.email = api.montarEmail(json);
+		Assert.assertEquals(true, this.email != null);
 	}
 	
 	@Test
 	public void deveraEnviarEmail(){
-		Assert.assertEquals("Enviado com Sucesso", api.enviarEmail(null));
+		Assert.assertEquals("Enviado com sucesso", api.enviarEmail(this.email));
 	}
 }
