@@ -16,6 +16,3 @@ Campos necessários para a identificação da doadora:
 
 Dois botões - Enviar e Limpar.
 
-enviar dados por meio de e-mail (blhtcc2016@gmail.com - senha: d81cb2b1)
-
-silva20102@gmail.com

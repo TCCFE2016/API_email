@@ -1,0 +1,18 @@
+TCC refrente a disponibilização de aplicativo.
+Linguagem: PHP, HTML5, CSS3, método restful
+
+
+Campos necessários para a identificação da doadora:
+
+	1 - matricula BLH/HUB (não obrigatório) - 7 caracteres - Nº/ANO - 000/0000
+	2 - Nome doadora (obrigatório) - 40 caracteres
+	3 - Data Nascimento (obrigatório) - 8 caracteres - 00/00/0000
+	4 - Data parto (obrigatório) - 8 caracteres - 00/00/0000
+	5 - Endereço completo (obrigatório) 90 caracteres
+	6 - Telefone (obrigatório) - 11 caracteres - (00)000000000
+	7 - Quantitativo frascos cheios (obrigatório) - 2 caracteres - 00
+	8 - Quantitativo frascos vazios (obrigatório) - 2 - caracteres - 00
+	9 - Foto cartão pré-natal (não obrigatório)
+
+Dois botões - Enviar e Limpar.
+
