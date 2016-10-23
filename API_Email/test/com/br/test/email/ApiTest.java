@@ -35,12 +35,12 @@ public class ApiTest {
 	}
 	
 	@Test
-	public void testarRespostaAPI(){
-		Assert.assertEquals("Enviado com Sucesso", api.enviarEmail());
+	public void deveraMontarUmEmail(){
+		Assert.assertEquals(true, api.montarEmail("") != null);
 	}
 	
 	@Test
-	public void deveraMontarUmEmail(){
-		Assert.assertEquals(true, api.montarEmail("") != null);
+	public void deveraEnviarEmail(){
+		Assert.assertEquals("Enviado com Sucesso", api.enviarEmail(null));
 	}
 }
