@@ -19,14 +19,15 @@ public class Email {
 	}
 	
 	public void setMensagem(Dados dados) {
-		mensagem = "Solicitação de pedido ao Banco de Leite"
-				+ "Matricula: " + dados.getMatricula() 
-				+ "Nome: " + dados.getNome()
-				+ "Data de Nascimento: " + dados.getDataNascimento()
-				+ "Data do Parto: "+ dados.getDataParto()
-				+ "Endereço: " + dados.getEndereco()
-				+ "Telefone: " + dados.getTelefone()
-				+ "Quantidade de Frascos Cheios: " + dados.getQuantidadeFrascosCheio()
-				+ "Quantidade de Frascos Vazios: " + dados.getQuantidadeFrascosVazio();
+		String quebraDeLinha = System.getProperty("line.separator");
+		mensagem = "Solicitação de pedido ao Banco de Leite " + quebraDeLinha
+				+ "Matricula: " + dados.getMatricula() + quebraDeLinha
+				+ "Nome: " + dados.getNome() + quebraDeLinha
+				+ "Data de Nascimento: " + dados.getDataNascimento() + quebraDeLinha
+				+ "Data do Parto: "+ dados.getDataParto() + quebraDeLinha
+				+ "Endereço: " + dados.getEndereco() + quebraDeLinha
+				+ "Telefone: " + dados.getTelefone() + quebraDeLinha
+				+ "Quantidade de Frascos Cheios: " + dados.getQuantidadeFrascosCheio() + quebraDeLinha
+				+ "Quantidade de Frascos Vazios: " + dados.getQuantidadeFrascosVazio() + quebraDeLinha; 
 	}	
 }

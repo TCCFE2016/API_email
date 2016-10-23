@@ -21,6 +21,6 @@ public class ApiRest {
 	@Produces("application/json")
 	public String enviarEmail(String json){
 		Email email = api.montarEmail(json);
-		return "";
+		return api.enviarEmail(email);
 	}
 }
